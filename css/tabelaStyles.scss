@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+header {
+  background-image: url(../img/card-precos.webp);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  
+  .upperHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    padding: 10px;
+
+    .logo {
+      width: 420px;
+      height: 75px;
+      filter: invert(100%);
+    }
+
+    nav {
+
+      ul {
+        display: flex;
+        gap: 25px;
+        margin-right: 25px;
+
+        li {
+          list-style: none;
+          font-size: 22px;
+
+          a {
+            text-decoration: none;
+            text-shadow: 0 0 2px rgba(22, 22, 245, 0.699);
+            color: rgb(40, 40, 56);
+            font-family: Helvetica;
+            transition: .5s ease;
+          }
+
+          a:hover {
+            color: blue;
+            border-bottom: 3px groove rgb(40, 40, 56);
+          }
+        }
+      }
+    }
+  }
+
+  .lowerHeader {
+    text-align: center;
+    cursor: default;
+    font-family: 'Poppins', sans-serif;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+  }
+}
