@@ -31,7 +31,7 @@ header .upperHeader nav .hbMenu {
   cursor: pointer;
 }
 header .upperHeader nav .hbMenu img {
-  width: 55px;
+  width: 45px;
   margin-right: 10px;
 }
 header .upperHeader nav ul {
@@ -106,7 +106,7 @@ header .lowerHeader span {
 .container .description p {
   font-family: Helvetica, arial, sans-serif;
   line-height: 2;
-  margin: 25px 0 20px;
+  margin: 25px 0 10px;
 }
 .container .compLogos {
   display: flex;
@@ -150,6 +150,7 @@ header .lowerHeader span {
   align-items: center;
   width: 100%;
   height: 40vh;
+  max-height: fit-content;
   margin: 25px 0;
   background-image: url(../img/cta-bg.webp);
   background-size: cover;
@@ -193,15 +194,40 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 25vh;
+  height: fit-content;
+  padding: 25px 35px;
   background: linear-gradient(90deg, #010010 0.08%, #020024 100%);
   color: white;
+  font-family: Helvetica, arial, sans-serif;
 }
 footer .adress h4 {
+  font-size: 18px;
   cursor: default;
 }
 footer .adress span {
   display: block;
+  margin: 10px 0 10px 20px;
+}
+footer .branches h4 {
+  font-size: 18px;
+  cursor: default;
+}
+footer .branches ul li {
+  margin: 10px 0 0 20px;
+  list-style: none;
+}
+footer .branches ul li a {
+  text-decoration: none;
+  color: white;
+}
+footer .branches ul li a:hover {
+  color: #6767e7;
+  text-shadow: 0 0 3px black;
+}
+footer .social h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  cursor: default;
 }
 footer .social ul {
   display: flex;
@@ -213,6 +239,12 @@ footer .social ul li {
 footer .social ul li img {
   width: 35px;
   filter: invert(100%);
+  transition: 0.25s ease-in-out;
+}
+footer .social ul li img:hover {
+  transform: scale(1.1);
+  border-radius: 50%;
+  box-shadow: 0 0 15px gray;
 }
 
 @media screen and (max-width: 1400px) {
@@ -233,5 +265,57 @@ footer .social ul li img {
   }
   header .upperHeader nav ul {
     display: none;
+  }
+}
+@media screen and (max-width: 790px) {
+  header .lowerHeader h1 {
+    font-size: 32px;
+  }
+  header .lowerHeader span {
+    font-size: 20px;
+    max-width: fit-content;
+  }
+
+  .container .description h2 {
+    font-size: 28px;
+  }
+  .container .description h3 {
+    font-size: 18px;
+  }
+  .container .compLogos .group {
+    max-width: fit-content;
+  }
+  .container .compLogos .group ul li img {
+    width: 80px;
+  }
+  .container .cta .ctaInfo {
+    margin: 7px 0;
+  }
+  .container .cta .ctaInfo h2 {
+    font-size: 24px;
+  }
+  .container .cta .ctaInfo span {
+    font-size: 17px;
+    max-width: fit-content;
+  }
+  .container .cta .buttons {
+    display: flex;
+  }
+  .container .cta .buttons .button {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    text-align: center;
+  }
+  footer .adress {
+    margin-bottom: 25px;
+  }
+  footer .branches {
+    margin-bottom: 25px;
   }
 }/*# sourceMappingURL=tabelaStyles.css.map */
