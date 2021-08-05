@@ -321,6 +321,12 @@ footer {
 //--------MEDIA-----------*
 //*************************
 
+@media screen and (min-width: 1366px) {
+  footer {
+    padding: 25px 75px;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   header {
 
