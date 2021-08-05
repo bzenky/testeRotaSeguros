@@ -3,3 +3,435 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+
+.whatsApp {
+  width: 45px;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  filter: opacity(0.7);
+  z-index: 100000;
+}
+
+.whatsApp:hover {
+  filter: opacity(1) saturate(150%);
+}
+
+header {
+  position: relative;
+  height: 100vh;
+
+
+  .upperHeader {
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    padding: 10px;
+    width: 100%;
+
+    .logo {
+      width: 420px;
+      height: 75px;
+      filter: invert(100%);
+    }
+
+    nav {
+      
+      .hbMenu {
+        display: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+
+        img {
+          width: 45px;
+          margin-right: 10px;
+        }
+      }
+
+      ul {
+        display: flex;
+        gap: 25px;
+        margin-right: 25px;
+        
+
+        li {
+          list-style: none;
+          font-size: 22px;
+
+          a {
+            text-decoration: none;
+            text-shadow: 0 0 2px rgba(22, 22, 245, 0.699);
+            color: rgb(40, 40, 56);
+            font-family: Helvetica;
+            transition: .25s ease;
+          }
+
+          a:hover {
+            color: blue;
+            border-bottom: 3px groove rgb(40, 40, 56);
+          }
+        }
+      }
+    }
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+
+    .prop {
+      position: absolute;
+      bottom: 150px;
+      font-family: 'Oxygen', sans-serif;
+      color: rgb(215, 212, 255);
+      text-shadow: 0 1px 3px rgb(40, 40, 56);
+      cursor: default;
+
+      h2 {
+        font-size: 56px;
+        margin-bottom: 25px;
+        letter-spacing: 3.6px;
+      }
+
+      span {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.container {
+
+  .types {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background-color: #e9e9e959;
+    
+    h3 {
+      padding: 10px 0 0;
+      font-size: 36px;
+    }
+
+    hr {
+      width: 70px;
+      height: 5px;
+      margin: 10px auto 25px;
+      background-color: darkblue;
+      border: none;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 360px;
+        height: 510px;
+        max-height: fit-content;
+        border: 2px solid #e6e6e6;
+        font-family:  Helvetica, arial, sans-serif; 
+        padding: 5px;
+        color: rgb(40, 40, 56);
+        cursor: default;
+        transition: .3s ease-in-out;
+
+        img {
+          width: 340px;
+        }
+
+        h4 {
+          font-size: 24px;
+          text-align: center;
+          margin: 20px 0 20px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 1.5;
+          padding: 0 5px;
+
+          a {
+            text-decoration: none;
+            color: rgb(103, 103, 231);
+          }
+
+          a:hover {
+            font-weight: bold;
+          }
+        }
+      }
+
+      .card:hover {
+        border: 4px double rgb(103, 103, 231);
+        box-shadow: 0 0 2px gray, 0 0 12px gray;
+        transform: scale(1.01);
+      }
+    }
+  }
+
+  .compLogos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e6e6;
+    width: 100%;
+    box-shadow: 0 0 5px darkgray;
+    margin-top: 20px;
+
+    .group {
+      max-width: 770px;
+
+      h3 {
+        margin: 25px 0 10px;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      hr {
+        width: 70px;
+        height: 5px;
+        margin: 10px auto;
+        background-color: darkblue;
+        border: none;
+      }
+
+      ul {
+        margin-top: 25px;
+        display: flex;
+        border-bottom: 2px groove rgba(0, 0, 0, 0.096);
+        flex-wrap: wrap;
+
+        li {
+          list-style: none;
+          margin: 0 5px;
+
+          img {
+            margin-bottom: 10px;
+            width: 110px;
+            transition: .3s linear;
+          }
+
+          img:hover {
+            filter: saturate(150%) brightness(1.1);
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+
+  .cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+    max-height: fit-content;
+    margin: 25px 0;
+    background-image: url(../img/cta-bg.webp);
+    background-size: cover;
+    background-position: center center;
+    font-family: 'Poppins', sans-serif;
+
+    .ctaInfo {
+      margin: 15px 0;
+
+      h2 {
+        text-align: center;
+        color: rgb(40, 40, 56);
+        font-size: 40px;
+        letter-spacing: 2px;
+      }
+
+      span {
+        font-size: 20px;
+        color: rgb(40, 40, 56);
+      }
+    }
+
+    .buttons {
+      margin-top: 5px;
+
+      .button {
+        background-color: rgb(28, 28, 235);
+        border: none;
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin: 0px 10px;
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+        font-size: 16px;
+        transition: .3s ease-in-out;
+      }
+
+      .button:hover {
+        background-color: rgb(5, 5, 167);
+        box-shadow: 0 0 2px white, 0 0 12px white, 0 0 20px white;
+      }
+    }
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    max-height: fit-content;
+    background-image: url(../img/quemsomos.webp), linear-gradient( rgba(128, 120, 241, 0.849), rgba(148, 170, 230, 0.61));
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center center;
+    padding: 15px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(40, 40, 56);
+    margin-bottom: 5px;
+    box-shadow: 0 0 5px gray;
+
+    h3 {
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 16px;
+      max-width: 1000px;
+      line-height: 1.5;
+      text-shadow: 0 0 2px black;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  padding: 25px 35px;
+  background: linear-gradient(90deg, #010010 0.08%, #020024 100%);
+  color: white;
+  font-family:  Helvetica, arial, sans-serif;
+
+  .adress {
+    h4 {
+      font-size: 18px;
+      cursor: default;
+    }
+
+    span {
+      display: block;
+      margin: 10px 0 10px 20px;
+    }
+  }
+
+  .branches {
+    h4 {
+      font-size: 18px;
+      cursor: default;
+    }
+
+    ul {
+
+      li {
+        margin: 10px 0 0 20px;
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+
+        a:hover {
+          color: rgb(103, 103, 231);
+          text-shadow: 0 0 3px black;
+        }
+      }
+    }
+  }
+
+  .social {
+
+    h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      cursor: default;
+    }
+
+    ul {
+      display: flex;
+      gap: 10px;
+
+      li {
+        list-style: none;
+
+        img {
+          width: 35px;
+          filter: invert(100%);
+          transition: .25s ease-in-out;
+        }
+
+        img:hover {
+          transform: scale(1.1);
+          border-radius: 50%;
+          box-shadow: 0 0 15px gray;
+        }
+      }
+    }
+  }
+}

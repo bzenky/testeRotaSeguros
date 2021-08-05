@@ -1,5 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.whatsApp {
+  width: 45px;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  filter: opacity(0.7);
+  z-index: 100000;
+}
+
+.whatsApp:hover {
+  filter: opacity(1) saturate(150%);
+}
+
+header {
+  position: relative;
+  height: 100vh;
+}
+header .upperHeader {
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  padding: 10px;
+  width: 100%;
+}
+header .upperHeader .logo {
+  width: 420px;
+  height: 75px;
+  filter: invert(100%);
+}
+header .upperHeader nav .hbMenu {
+  display: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+header .upperHeader nav .hbMenu img {
+  width: 45px;
+  margin-right: 10px;
+}
+header .upperHeader nav ul {
+  display: flex;
+  gap: 25px;
+  margin-right: 25px;
+}
+header .upperHeader nav ul li {
+  list-style: none;
+  font-size: 22px;
+}
+header .upperHeader nav ul li a {
+  text-decoration: none;
+  text-shadow: 0 0 2px rgba(22, 22, 245, 0.699);
+  color: #282838;
+  font-family: Helvetica;
+  transition: 0.25s ease;
+}
+header .upperHeader nav ul li a:hover {
+  color: blue;
+  border-bottom: 3px groove #282838;
+}
+header .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+header .swiper-slide {
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+header .swiper-slide .prop {
+  position: absolute;
+  bottom: 150px;
+  font-family: "Oxygen", sans-serif;
+  color: #d7d4ff;
+  text-shadow: 0 1px 3px #282838;
+  cursor: default;
+}
+header .swiper-slide .prop h2 {
+  font-size: 56px;
+  margin-bottom: 25px;
+  letter-spacing: 3.6px;
+}
+header .swiper-slide .prop span {
+  font-size: 40px;
+}
+header .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header .swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container .types {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background-color: #e9e9e959;
+}
+.container .types h3 {
+  padding: 10px 0 0;
+  font-size: 36px;
+}
+.container .types hr {
+  width: 70px;
+  height: 5px;
+  margin: 10px auto 25px;
+  background-color: darkblue;
+  border: none;
+}
+.container .types .cards {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.container .types .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+  height: 510px;
+  max-height: fit-content;
+  border: 2px solid #e6e6e6;
+  font-family: Helvetica, arial, sans-serif;
+  padding: 5px;
+  color: #282838;
+  cursor: default;
+  transition: 0.3s ease-in-out;
+}
+.container .types .cards .card img {
+  width: 340px;
+}
+.container .types .cards .card h4 {
+  font-size: 24px;
+  text-align: center;
+  margin: 20px 0 20px;
+}
+.container .types .cards .card p {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0 5px;
+}
+.container .types .cards .card p a {
+  text-decoration: none;
+  color: #6767e7;
+}
+.container .types .cards .card p a:hover {
+  font-weight: bold;
+}
+.container .types .cards .card:hover {
+  border: 4px double #6767e7;
+  box-shadow: 0 0 2px gray, 0 0 12px gray;
+  transform: scale(1.01);
+}
+.container .compLogos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6e6e6;
+  width: 100%;
+  box-shadow: 0 0 5px darkgray;
+  margin-top: 20px;
+}
+.container .compLogos .group {
+  max-width: 770px;
+}
+.container .compLogos .group h3 {
+  margin: 25px 0 10px;
+  text-align: center;
+  font-size: 30px;
+}
+.container .compLogos .group hr {
+  width: 70px;
+  height: 5px;
+  margin: 10px auto;
+  background-color: darkblue;
+  border: none;
+}
+.container .compLogos .group ul {
+  margin-top: 25px;
+  display: flex;
+  border-bottom: 2px groove rgba(0, 0, 0, 0.096);
+  flex-wrap: wrap;
+}
+.container .compLogos .group ul li {
+  list-style: none;
+  margin: 0 5px;
+}
+.container .compLogos .group ul li img {
+  margin-bottom: 10px;
+  width: 110px;
+  transition: 0.3s linear;
+}
+.container .compLogos .group ul li img:hover {
+  filter: saturate(150%) brightness(1.1);
+  transform: scale(1.2);
+}
+.container .cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+  max-height: fit-content;
+  margin: 25px 0;
+  background-image: url(../img/cta-bg.webp);
+  background-size: cover;
+  background-position: center center;
+  font-family: "Poppins", sans-serif;
+}
+.container .cta .ctaInfo {
+  margin: 15px 0;
+}
+.container .cta .ctaInfo h2 {
+  text-align: center;
+  color: #282838;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+.container .cta .ctaInfo span {
+  font-size: 20px;
+  color: #282838;
+}
+.container .cta .buttons {
+  margin-top: 5px;
+}
+.container .cta .buttons .button {
+  background-color: #1c1ceb;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin: 0px 10px;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+.container .cta .buttons .button:hover {
+  background-color: #0505a7;
+  box-shadow: 0 0 2px white, 0 0 12px white, 0 0 20px white;
+}
+.container .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+  max-height: fit-content;
+  background-image: url(../img/quemsomos.webp), linear-gradient(rgba(128, 120, 241, 0.849), rgba(148, 170, 230, 0.61));
+  background-blend-mode: screen;
+  background-size: cover;
+  background-position: center center;
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+  color: #282838;
+  margin-bottom: 5px;
+  box-shadow: 0 0 5px gray;
+}
+.container .about h3 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.container .about p {
+  font-size: 16px;
+  max-width: 1000px;
+  line-height: 1.5;
+  text-shadow: 0 0 2px black;
+  margin-bottom: 5px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  padding: 25px 35px;
+  background: linear-gradient(90deg, #010010 0.08%, #020024 100%);
+  color: white;
+  font-family: Helvetica, arial, sans-serif;
+}
+footer .adress h4 {
+  font-size: 18px;
+  cursor: default;
+}
+footer .adress span {
+  display: block;
+  margin: 10px 0 10px 20px;
+}
+footer .branches h4 {
+  font-size: 18px;
+  cursor: default;
+}
+footer .branches ul li {
+  margin: 10px 0 0 20px;
+  list-style: none;
+}
+footer .branches ul li a {
+  text-decoration: none;
+  color: white;
+}
+footer .branches ul li a:hover {
+  color: #6767e7;
+  text-shadow: 0 0 3px black;
+}
+footer .social h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  cursor: default;
+}
+footer .social ul {
+  display: flex;
+  gap: 10px;
+}
+footer .social ul li {
+  list-style: none;
+}
+footer .social ul li img {
+  width: 35px;
+  filter: invert(100%);
+  transition: 0.25s ease-in-out;
+}
+footer .social ul li img:hover {
+  transform: scale(1.1);
+  border-radius: 50%;
+  box-shadow: 0 0 15px gray;
 }/*# sourceMappingURL=styles.css.map */
