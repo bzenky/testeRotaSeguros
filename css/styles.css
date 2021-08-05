@@ -352,6 +352,11 @@ footer .social ul li img:hover {
   box-shadow: 0 0 15px gray;
 }
 
+@media screen and (min-width: 1366px) {
+  footer {
+    padding: 25px 75px;
+  }
+}
 @media screen and (max-width: 1100px) {
   header .upperHeader .logo {
     width: 210px;
