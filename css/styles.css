@@ -388,9 +388,6 @@ footer .social ul li img:hover {
     visibility: visible;
     overflow-y: auto;
   }
-  header .swiper-container .swiper-wrapper .swiper-slide img {
-    position: sticky;
-  }
   header .swiper-slide .prop h2 {
     font-size: 40px;
     letter-spacing: 2px;
