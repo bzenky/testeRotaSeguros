@@ -1,3 +1,5 @@
+//Menu Hambúrguer
+
 const hbMenu = document.querySelector('.hbMenu')
 
 function toggleHbMenu() {
@@ -5,4 +7,4 @@ function toggleHbMenu() {
   nav.classList.toggle('active')
 }
 
-hbMenu.addEventListener('click', toggleHbMenu)
+hbMenu.addEventListener('click', toggleHbMenu);

@@ -5,6 +5,18 @@
   box-sizing: border-box;
 }
 
+.whatsApp {
+  width: 45px;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  filter: opacity(0.8);
+}
+
+.whatsApp:hover {
+  filter: opacity(1) saturate(150%);
+}
+
 header {
   background-image: url(../img/card-precos.webp);
   background-size: cover;
@@ -18,6 +30,7 @@ header .upperHeader {
   align-items: center;
   height: 15vh;
   padding: 10px;
+  width: 100%;
 }
 header .upperHeader .logo {
   width: 420px;
@@ -48,7 +61,7 @@ header .upperHeader nav ul li a {
   text-shadow: 0 0 2px rgba(22, 22, 245, 0.699);
   color: #282838;
   font-family: Helvetica;
-  transition: 0.5s ease;
+  transition: 0.25s ease;
 }
 header .upperHeader nav ul li a:hover {
   color: blue;
@@ -260,11 +273,36 @@ footer .social ul li img:hover {
     width: 210px;
     height: 35px;
   }
-  header .upperHeader nav .hbMenu {
+  header .upperHeader .nav .hbMenu {
     display: block;
+    right: 0;
   }
-  header .upperHeader nav ul {
-    display: none;
+  header .upperHeader .nav .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 85px;
+    right: 0;
+    z-index: 1000;
+    transition: 0.8s;
+    visibility: hidden;
+    overflow-y: hidden;
+    margin: 0;
+  }
+  header .upperHeader .nav .menu li {
+    text-align: right;
+    padding: 10px 15px;
+    width: fit-content;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+  }
+  header .upperHeader .nav.active .menu {
+    height: calc(100vh - 85px);
+    visibility: visible;
+    overflow-y: auto;
   }
 }
 @media screen and (max-width: 790px) {
@@ -276,6 +314,9 @@ footer .social ul li img:hover {
     max-width: fit-content;
   }
 
+  .container .description {
+    padding: 0 15px;
+  }
   .container .description h2 {
     font-size: 28px;
   }
@@ -287,6 +328,9 @@ footer .social ul li img:hover {
   }
   .container .compLogos .group ul li img {
     width: 80px;
+  }
+  .container .cta {
+    padding: 0 15px;
   }
   .container .cta .ctaInfo {
     margin: 7px 0;
@@ -302,8 +346,12 @@ footer .social ul li img:hover {
     display: flex;
   }
   .container .cta .buttons .button {
+    display: flex;
+    width: 100px;
+    align-items: center;
+    text-align: center;
     padding: 5px 10px;
-    font-size: 14px;
+    font-size: 13px;
   }
 
   footer {
