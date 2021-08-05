@@ -109,9 +109,13 @@ header .swiper-slide .prop h2 {
   font-size: 56px;
   margin-bottom: 25px;
   letter-spacing: 3.6px;
+  text-transform: uppercase;
+  max-width: 1000px;
 }
 header .swiper-slide .prop span {
+  display: block;
   font-size: 40px;
+  max-width: 1000px;
 }
 header .swiper-slide img {
   display: block;
@@ -185,48 +189,34 @@ header .swiper-container {
   transform: scale(1.01);
 }
 .container .compLogos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 25px;
   background-color: #e6e6e6;
+  font-family: "Poppins", sans-serif;
+}
+.container .compLogos .swiper-container {
   width: 100%;
-  box-shadow: 0 0 5px darkgray;
-  margin-top: 20px;
+  height: 270px;
+  padding: 20px;
 }
-.container .compLogos .group {
-  max-width: 770px;
-}
-.container .compLogos .group h3 {
-  margin: 25px 0 10px;
+.container .compLogos .swiper-container h2 {
   text-align: center;
-  font-size: 30px;
 }
-.container .compLogos .group hr {
+.container .compLogos .swiper-container hr {
   width: 70px;
   height: 5px;
-  margin: 10px auto;
+  margin: 10px auto 25px;
   background-color: darkblue;
   border: none;
 }
-.container .compLogos .group ul {
-  margin-top: 25px;
-  display: flex;
-  border-bottom: 2px groove rgba(0, 0, 0, 0.096);
-  flex-wrap: wrap;
+.container .compLogos .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 100px;
+  height: 170px;
 }
-.container .compLogos .group ul li {
-  list-style: none;
-  margin: 0 5px;
-}
-.container .compLogos .group ul li img {
-  margin-bottom: 10px;
-  width: 110px;
-  transition: 0.3s linear;
-}
-.container .compLogos .group ul li img:hover {
-  filter: saturate(150%) brightness(1.1);
-  transform: scale(1.2);
+.container .compLogos .swiper-slide img {
+  display: block;
+  width: 130px;
 }
 .container .cta {
   display: flex;
@@ -289,7 +279,7 @@ header .swiper-container {
   padding: 15px;
   font-family: "Poppins", sans-serif;
   color: #282838;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   box-shadow: 0 0 5px gray;
 }
 .container .about h3 {
@@ -360,4 +350,119 @@ footer .social ul li img:hover {
   transform: scale(1.1);
   border-radius: 50%;
   box-shadow: 0 0 15px gray;
+}
+
+@media screen and (max-width: 1100px) {
+  header .upperHeader .logo {
+    width: 210px;
+    height: 35px;
+  }
+  header .upperHeader .nav .hbMenu {
+    display: block;
+    right: 0;
+  }
+  header .upperHeader .nav .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 85px;
+    right: 0;
+    z-index: 1000;
+    transition: 0.8s;
+    visibility: hidden;
+    overflow-y: hidden;
+    margin: 0;
+  }
+  header .upperHeader .nav .menu li {
+    text-align: right;
+    padding: 10px 15px;
+    width: fit-content;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+  }
+  header .upperHeader .nav.active .menu {
+    height: calc(100vh - 85px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  header .swiper-container .swiper-wrapper .swiper-slide img {
+    position: sticky;
+  }
+  header .swiper-slide .prop h2 {
+    font-size: 40px;
+    letter-spacing: 2px;
+  }
+  header .swiper-slide .prop span {
+    font-size: 28px;
+    max-width: 700px;
+  }
+
+  .container .types h3 {
+    font-size: 26px;
+  }
+  .container .types .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .types .cards .card {
+    margin-bottom: 15px;
+  }
+  .container .compLogos {
+    display: none;
+  }
+  .container .cta {
+    padding: 0 15px;
+  }
+  .container .cta .ctaInfo {
+    margin: 7px 0;
+  }
+  .container .cta .ctaInfo h2 {
+    font-size: 24px;
+  }
+  .container .cta .ctaInfo span {
+    font-size: 17px;
+    max-width: fit-content;
+  }
+  .container .cta .buttons {
+    display: flex;
+  }
+  .container .cta .buttons .button {
+    display: flex;
+    width: 100px;
+    align-items: center;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+  .container .about {
+    height: 70vh;
+  }
+  .container .about h3 {
+    font-size: 26px;
+  }
+  .container .about p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    text-align: center;
+  }
+  footer .adress {
+    margin-bottom: 25px;
+  }
+  footer .branches {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 1100px) and (max-width: 790px) {
+  .whatsApp {
+    filter: opacity(1);
+  }
 }/*# sourceMappingURL=styles.css.map */

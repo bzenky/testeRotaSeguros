@@ -125,10 +125,14 @@ header {
         font-size: 56px;
         margin-bottom: 25px;
         letter-spacing: 3.6px;
+        text-transform: uppercase;
+        max-width: 1000px;
       }
 
       span {
+        display: block;
         font-size: 40px;
+        max-width: 1000px;
       }
     }
   }
@@ -220,55 +224,40 @@ header {
   }
 
   .compLogos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-top: 25px;
     background-color: #e6e6e6;
-    width: 100%;
-    box-shadow: 0 0 5px darkgray;
-    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    
+    .swiper-container {
+      width: 100%;
+      height: 270px;
+      padding: 20px;
 
-    .group {
-      max-width: 770px;
-
-      h3 {
-        margin: 25px 0 10px;
+      h2 {
         text-align: center;
-        font-size: 30px;
       }
 
       hr {
         width: 70px;
         height: 5px;
-        margin: 10px auto;
+        margin: 10px auto 25px;
         background-color: darkblue;
         border: none;
       }
-
-      ul {
-        margin-top: 25px;
-        display: flex;
-        border-bottom: 2px groove rgba(0, 0, 0, 0.096);
-        flex-wrap: wrap;
-
-        li {
-          list-style: none;
-          margin: 0 5px;
-
-          img {
-            margin-bottom: 10px;
-            width: 110px;
-            transition: .3s linear;
-          }
-
-          img:hover {
-            filter: saturate(150%) brightness(1.1);
-            transform: scale(1.2);
-          }
-        }
-      }
     }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 100px;
+      height: 170px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 130px;
+    }
+
   }
 
   .cta {
@@ -339,7 +328,7 @@ header {
     padding: 15px;
     font-family: 'Poppins', sans-serif;
     color: rgb(40, 40, 56);
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     box-shadow: 0 0 5px gray;
 
     h3 {
@@ -433,5 +422,173 @@ footer {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  header {
+    
+    .upperHeader {
+
+      .logo {
+        width: 210px;
+        height: 35px;
+      }
+
+      .nav {
+        
+        .hbMenu {
+          display: block;
+          right: 0;
+        }
+
+        .menu {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          position: absolute;
+          width: 100%;
+          height: 0;
+          top: 85px;
+          right: 0;
+          z-index: 1000;
+          transition: .8s;
+          visibility: hidden;
+          overflow-y: hidden;
+          margin: 0;
+
+          li {
+            text-align: right;
+            padding: 10px 15px;
+            width: fit-content;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+            font-size: 20px;
+          }
+        }
+      }
+      
+      .nav.active .menu {
+        height: calc(100vh - 85px);
+        visibility: visible;
+        overflow-y: auto;
+      }
+    }
+
+    .swiper-container {
+
+      .swiper-wrapper {
+        
+        .swiper-slide {
+          img {
+            position: ;
+          }
+        }
+      }
+    }
+
+    .swiper-slide {
+      .prop {
+
+        h2 {
+          font-size: 40px;
+          letter-spacing: 2px;
+        }
+
+        span {
+          font-size: 28px;
+          max-width: 700px;
+        }
+      }
+    }
+  }
+
+  .container {
+
+    .types {
+
+      h3 {
+        font-size: 26px;
+      }
+
+      .cards {
+        flex-direction: column;
+        align-items: center;
+        
+        .card {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .compLogos {
+      display: none;
+    }
+
+    .cta {
+      padding: 0 15px;
+      
+      .ctaInfo {
+        margin: 7px 0;
+
+        h2 {
+          font-size: 24px;
+        }
+
+        span {
+          font-size: 17px;
+          max-width: fit-content;
+        }
+      }
+
+      .buttons {
+        display: flex;
+
+        .button {
+          display: flex;
+          width: 100px;
+          align-items: center;
+          text-align: center;
+          padding: 5px 10px;
+          font-size: 13px;
+        }
+      }
+    }
+
+    .about {
+      height: 70vh;
+
+
+      h3 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    text-align: center;
+
+    .adress {
+      margin-bottom: 25px;
+    }
+
+    .branches {
+      margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+  .whatsApp {
+    filter: opacity(1);
+  }
+
+
   }
 }
