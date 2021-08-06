@@ -126,8 +126,8 @@ header .lowerHeader span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #e6e6e6;
   width: 100%;
+  background-color: #e6e6e6;
   box-shadow: 0 0 5px darkgray;
 }
 .container .compLogos .group {
@@ -187,15 +187,15 @@ header .lowerHeader span {
   margin-top: 5px;
 }
 .container .cta .buttons .button {
+  padding: 15px 20px;
   background-color: #1c1ceb;
   border: none;
-  padding: 15px 20px;
   border-radius: 10px;
   margin: 0px 10px;
   text-decoration: none;
-  cursor: pointer;
-  color: white;
   font-size: 16px;
+  color: white;
+  cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 .container .cta .buttons .button:hover {
@@ -283,24 +283,24 @@ footer .social ul li img:hover {
     right: 0;
   }
   header .upperHeader .nav .menu {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    position: absolute;
     width: 100%;
     height: 0;
     top: 90px;
     right: 0;
-    z-index: 1000;
-    transition: 0.8s;
+    margin: 0;
     visibility: hidden;
     overflow-y: hidden;
-    margin: 0;
+    z-index: 1000;
+    transition: 0.8s;
   }
   header .upperHeader .nav .menu li {
-    text-align: right;
-    padding: 10px 15px;
     width: fit-content;
+    padding: 10px 15px;
+    text-align: right;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     font-size: 20px;
   }
@@ -359,9 +359,9 @@ footer .social ul li img:hover {
   }
   .container .cta .buttons .button {
     display: flex;
-    width: 100px;
     align-items: center;
     text-align: center;
+    width: 100px;
     padding: 5px 10px;
     font-size: 13px;
   }
@@ -375,7 +375,13 @@ footer .social ul li img:hover {
   footer .adress {
     margin-bottom: 25px;
   }
+  footer .adress span {
+    margin: 10px 0;
+  }
   footer .branches {
     margin-bottom: 25px;
+  }
+  footer .branches ul li {
+    margin: 10px 0;
   }
 }/*# sourceMappingURL=tabelaStyles.css.map */

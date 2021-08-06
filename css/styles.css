@@ -31,13 +31,13 @@ header {
 }
 header .upperHeader {
   position: absolute;
-  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   height: 15vh;
   padding: 10px;
-  width: 100%;
+  z-index: 100;
 }
 header .upperHeader .logo {
   width: 420px;
@@ -102,7 +102,6 @@ header .swiper-slide .prop {
   bottom: 150px;
   font-family: "Oxygen", sans-serif;
   color: #d7d4ff;
-  text-shadow: 0 1px 3px #282838;
   cursor: default;
 }
 header .swiper-slide .prop h2 {
@@ -111,11 +110,13 @@ header .swiper-slide .prop h2 {
   letter-spacing: 3.6px;
   text-transform: uppercase;
   max-width: 1000px;
+  text-shadow: 0 0 5px #282838;
 }
 header .swiper-slide .prop span {
   display: block;
   font-size: 40px;
   max-width: 1000px;
+  text-shadow: 0 0 5px #282838;
 }
 header .swiper-slide img {
   display: block;
@@ -146,8 +147,8 @@ header .swiper-container {
 }
 .container .types .cards {
   display: flex;
-  justify-content: space-evenly;
   width: 100%;
+  justify-content: space-evenly;
 }
 .container .types .cards .card {
   display: flex;
@@ -156,9 +157,9 @@ header .swiper-container {
   width: 360px;
   height: 510px;
   max-height: fit-content;
+  padding: 5px;
   border: 2px solid #e6e6e6;
   font-family: Helvetica, arial, sans-serif;
-  padding: 5px;
   color: #282838;
   cursor: default;
   transition: 0.3s ease-in-out;
@@ -272,14 +273,14 @@ header .swiper-container {
   width: 100%;
   height: 50vh;
   max-height: fit-content;
+  padding: 15px;
+  margin-bottom: 15px;
   background-image: url(../img/quemsomos.webp), linear-gradient(rgba(128, 120, 241, 0.849), rgba(148, 170, 230, 0.61));
   background-blend-mode: screen;
   background-size: cover;
   background-position: center center;
-  padding: 15px;
   font-family: "Poppins", sans-serif;
   color: #282838;
-  margin-bottom: 15px;
   box-shadow: 0 0 5px gray;
 }
 .container .about h3 {
@@ -367,24 +368,24 @@ footer .social ul li img:hover {
     right: 0;
   }
   header .upperHeader .nav .menu {
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    position: absolute;
     width: 100%;
     height: 0;
     top: 90px;
     right: 0;
+    margin: 0;
     z-index: 1000;
-    transition: 0.8s;
     visibility: hidden;
     overflow-y: hidden;
-    margin: 0;
+    transition: 0.8s;
   }
   header .upperHeader .nav .menu li {
-    text-align: right;
-    padding: 10px 15px;
     width: fit-content;
+    padding: 10px 15px;
+    text-align: right;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     font-size: 20px;
   }
@@ -437,9 +438,9 @@ footer .social ul li img:hover {
   }
   .container .cta .buttons .button {
     display: flex;
-    width: 100px;
-    align-items: center;
     text-align: center;
+    align-items: center;
+    width: 100px;
     padding: 5px 10px;
     font-size: 13px;
   }
@@ -463,8 +464,14 @@ footer .social ul li img:hover {
   footer .adress {
     margin-bottom: 25px;
   }
+  footer .adress span {
+    margin: 10px 0;
+  }
   footer .branches {
     margin-bottom: 25px;
+  }
+  footer .branches ul li {
+    margin: 10px 0;
   }
 }
 @media screen and (max-width: 790px) {
